@@ -1,13 +1,16 @@
 import Link from 'next/link';
+// import { notFound } from 'next/navigation';
 import React from 'react'
 // import Comments from '@/components/comments'
 
 const  page = async ({params}) => {
-  // const paramsObj=await params;
+ 
   const { id } = params;
-  // console.log(paramsObj);
+// if(!/^\+$/.test(id)){
+//   notFound();
+// }
 
-   console.log( id);
+  //  console.log( id);
  
   return (
     <div className='p-4'>

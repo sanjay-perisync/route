@@ -12,9 +12,9 @@ const posts = [
 
 
 export async function generateMetadata(params) {
-  const { id } = await  params;
+  const { id } = await params;
 
-  // console.log("id:",id);
+  console.log("id:",id);
   
   
   return {
@@ -23,8 +23,11 @@ export async function generateMetadata(params) {
 }
 
 
-const profileroute = (params) => {
+const  profileroute = async(params) => {
+  const { id } = await  params;
 
+  console.log(id);
+  
 
   return (
     <div>

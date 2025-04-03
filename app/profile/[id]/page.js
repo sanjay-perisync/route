@@ -1,4 +1,5 @@
 // import PostDetail from '@/components/id'
+import {notFound} from 'next/navigation';
 import Link from 'next/link';
 import React from 'react'
 
@@ -12,9 +13,12 @@ export async function generateMetadata({params}) {
   };
 }
 
-const page = ({params}) => {
-  const { id } =  params;
+const page = async({params}) => {
+  const { id } = await params;
  
+  if(!/^\d+$/.test(id)){
+  notFound();
+}
   return (
     <div>
         {/* <PostDetail params={params}/> */}
